@@ -27,7 +27,10 @@ const JobCard = (props) => {
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <p className="text-gray-500">Posted {diffInDays} days ago</p>
+          <p className="text-gray-500">
+            Posted {diffInDays > 1 ? `${diffInDays} days` : `${diffInDays} day`}{" "}
+            ago
+          </p>
           <a href={props.jobLink}>
             <button className="text-slate-900 font-bold border border-slate-800 px-10 py-2 rounded-md">
               Apply
